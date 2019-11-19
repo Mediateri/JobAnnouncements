@@ -5,16 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* version information
 
-Rails version: 5.2.3
-Ruby version: 2.5.1 (x86_64-linux)
+1. Rails version: 5.2.3
+2. Ruby version: 2.5.1 (x86_64-linux)
 
 * Catalog design
 
 https://docs.google.com/spreadsheets/d/1LgreyJ1tWqud1hWaeAQI9C5Wf25vaG62BzVPdAcJIu0/edit#gid=0
 
 * List of Functions
+
 1.	The system will register all the users (all people who are looking for job) and every user will be registered according to his profession.
 2.	The system will provide all job announcements to the users but only to whom it may concern for example if the announcement if for teaching it will directly go to the teachers only
 3.	Users will be allowed to change their profile in case they wish to do it

@@ -40,6 +40,6 @@ https://cacoo.com/diagrams/y5raiFxzFypTxphO/2E621
 https://cacoo.com/diagrams/y5raiFxzFypTxphO/2E621
 
 * Scheduled to use Gem
- gem 'bootstrap'
-
+ 1. gem 'bootstrap'
+ 
 * ...

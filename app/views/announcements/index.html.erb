@@ -1,0 +1,15 @@
+<h1>Announcements#index</h1>
+<p class="message"><%= notice %></p>
+
+<% @announcements.each do |announcement| %>
+
+   <p>Title : <%= announcement.title %></p>
+   <p>Body : <%= announcement.body%></p>
+   <p> <%= link_to 'details', announcement_path(announcement.id) %>
+    <%= link_to link_to "edit", edit_announcement_path(announcement.id) %>
+    <%= link_to link_to 'Delete ', announcement_path(announcement.id), method: :delete %></p>
+    <br/>
+<br/>
+<% end %>
+<%= link_to 'Post a new announcement', new_announcement_path %>
+

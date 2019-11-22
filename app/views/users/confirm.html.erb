@@ -1,0 +1,20 @@
+<h1>Users#confirm</h1>
+<%= form_with(model: @user, url: users_path, local: true) do |form| %>
+    <%= form.hidden_field :name %>
+    <%= form.hidden_field :email%>
+    <%= form.hidden_field :proffession %>
+    <%= form.hidden_field :Role %>
+    <%= form.hidden_field :password %>
+    <%= form.hidden_field :password_confirmation %>
+    <p>name:<%= @user.name %></p>
+    <p>email:<%= @user.email %></p>
+    <p>proffession:<%= @user.proffession %></p>
+    <%= form.submit  "submit" %>
+  <% end %>
+  
+  <%= form_with(model: @user, url: new_user_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :name %>
+    <%= form.hidden_field :email%>
+    <%= form.hidden_field :proffession %>
+    <%= form.submit "back" %>
+  <% end %>

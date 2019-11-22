@@ -1,0 +1,15 @@
+<h1>Announcements#confirm</h1>
+  <%= form_with(model: @announcement, url: announcements_path, local: true) do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :body %>
+    <%= form.hidden_field :user_id %>
+    <p>Title:<%= @announcement.title %></p> 
+    <p>Body:<%= @announcement.body %></p>
+    <%= form.submit  "submit" %>
+  <% end %>
+  
+  <%= form_with(model: @announcement, url: new_announcement_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :body %>
+    <%= form.submit "back" %>
+  <% end %>

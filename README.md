@@ -12,7 +12,7 @@ Things you may want to cover:
 
 # Catalog design
 
-* https://docs.google.com/spreadsheets/d/1LgreyJ1tWqud1hWaeAQI9C5Wf25vaG62BzVPdAcJIu0/edit#gid=0
+* https://docs.google.com/spreadsheets/d/1LgreyJ1tWqud1hWaeAQI9C5Wf25vaG62BzVPdAcJIu0/edit?usp=sharing
 
 # List of Functions
 
@@ -25,11 +25,11 @@ Things you may want to cover:
 
 # Table definition document
 
-* https://docs.google.com/spreadsheets/d/1xR2JH2_R19cqG1Fb1OYI6yAw1yiU8yVDYG5MesV7Elk/edit#gid=0
+* https://docs.google.com/spreadsheets/d/1xR2JH2_R19cqG1Fb1OYI6yAw1yiU8yVDYG5MesV7Elk/edit?usp=sharing
 
 # ER diagram
 
-* https://docs.google.com/document/d/1yWKx-gjCwIVtC1Ofr-oA-itsK4qd8Lse6q9Xr6wnHnA/edit
+* https://docs.google.com/document/d/1yWKx-gjCwIVtC1Ofr-oA-itsK4qd8Lse6q9Xr6wnHnA/edit?usp=sharing
 
 # Screen transition diagram
 

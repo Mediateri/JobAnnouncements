@@ -17,12 +17,15 @@ Things you may want to cover:
 # List of Functions
 
 *	The system will register all the users (all people who are looking for job) and every user will be registered according to his profession.
-*	The system will provide all job announcements to the users but only to whom it may concern for example if the announcement if for teaching it will directly go to the teachers only
+*	All announcements will be sorted using creation date but in descending order
 *	Users will be allowed to change their profile in case they wish to do it
 *	Only Admin have full permission over users
 *	If a certain user have heard about job announcement or job opportunity elsewhere is allowed to share it
 *	Every announcement created have to be made for a particular group only and this means that it belongs to them
-
+* 	Users wil login with email and password 
+*	Users can be able to logout
+*   only admin and user that have created announcement is the only one that is allowed to delete and update it 
+*   pagination function
 # Table definition document
 
 * https://docs.google.com/spreadsheets/d/1xR2JH2_R19cqG1Fb1OYI6yAw1yiU8yVDYG5MesV7Elk/edit?usp=sharing
@@ -42,5 +45,5 @@ Things you may want to cover:
 # Scheduled to use Gem
  * bootstrap
  * bcrypt
- 
+ * kaminari
 * ...

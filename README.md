@@ -22,10 +22,13 @@ Things you may want to cover:
 *	Only Admin have full permission over users
 *	If a certain user have heard about job announcement or job opportunity elsewhere is allowed to share it
 *	Every announcement created have to be made for a particular group only and this means that it belongs to them
+*   Users are allowed to make comment on the post and it is a better of saying thanks  (comment function)
 * 	Users wil login with email and password 
 *	Users can be able to logout
 *   only admin and user that have created announcement is the only one that is allowed to delete and update it 
 *   pagination function
+*   i will use devise function for log in and log out
+*   comment funcction   
 # Table definition document
 
 * https://docs.google.com/spreadsheets/d/1xR2JH2_R19cqG1Fb1OYI6yAw1yiU8yVDYG5MesV7Elk/edit?usp=sharing
@@ -46,4 +49,5 @@ Things you may want to cover:
  * bootstrap
  * bcrypt
  * kaminari
+ * devise
 * ...

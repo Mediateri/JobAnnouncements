@@ -3,13 +3,15 @@
     <%= form.hidden_field :title %>
     <%= form.hidden_field :body %>
     <%= form.hidden_field :user_id %>
+    <%= form.hidden_field :owners %>
     <p>Title:<%= @announcement.title %></p> 
     <p>Body:<%= @announcement.body %></p>
-    <%= form.submit  "submit" %>
+    <p>Owner:<%= @announcement.owners %></p>
+    <%= form.submit  "submit", class: "btn btn-primary" %>
   <% end %>
   
   <%= form_with(model: @announcement, url: new_announcement_path, local: true, method: 'get') do |form| %>
     <%= form.hidden_field :title %>
     <%= form.hidden_field :body %>
-    <%= form.submit "back" %>
+    <%= form.submit "back", class: "btn btn-primary"  %>
   <% end %>

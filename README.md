@@ -1,18 +1,13 @@
-# README
+# Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Here in Rwanda getting job of your profession is not that easy because of how information is being given. And the employers have problems of hiring people who don’t know what to do. Sometime a job announcement may take more than two months on job announcement website not because of there is no one to apply for it just because of those have managed to apply for it  are not qualified for the job yet those who are qualified for job have problems not getting announcements. That is the reason why here in Rwanda it looks like that there is shortage of employees on job market. And the problem really is communication that is the reason why this system is needed to act as mediator between employees and employers.
 
 # version information
 
 * Rails version: 5.2.3
 * Ruby version: 2.5.1 (x86_64-linux)
 
-# Catalog design
 
-* https://docs.google.com/spreadsheets/d/1LgreyJ1tWqud1hWaeAQI9C5Wf25vaG62BzVPdAcJIu0/edit?usp=sharing
 
 # List of Functions
 
@@ -28,7 +23,11 @@ Things you may want to cover:
 *   only admin and user that have created announcement is the only one that is allowed to delete and update it 
 *   pagination function
 *   i will use devise function for log in and log out
-*   comment funcction   
+*   comment funcction 
+
+# Catalog design
+
+* https://docs.google.com/spreadsheets/d/1LgreyJ1tWqud1hWaeAQI9C5Wf25vaG62BzVPdAcJIu0/edit?usp=sharing
 # Table definition document
 
 * https://docs.google.com/spreadsheets/d/1xR2JH2_R19cqG1Fb1OYI6yAw1yiU8yVDYG5MesV7Elk/edit?usp=sharing
@@ -50,4 +49,6 @@ Things you may want to cover:
  * bcrypt
  * kaminari
  * devise
+ * rails_admin
+ * jquery
 * ...

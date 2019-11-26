@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
       if @comment.save
         format.js { render :index }
       else
-        format.html { redirect_to announcement_path(@announcement), notice: 'Post failed...' }
+        format.html { redirect_to announcement_path(@announcement), notice: 'Post failed please try again later...' }
       end
     end
   end

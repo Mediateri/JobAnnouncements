@@ -1,9 +1,9 @@
 class AnnouncementsController < ApplicationController
-  before_action :authorize
+  before_action :authenticate_user!
   before_action :set_announcement, only: [:show, :edit, :update, :destroy]
 
   def index
-    @announcements = Announcement.all
+    @announcements = Announcement.order('created_at DESC').page(params[:page])
   end
   
   def destroy
@@ -50,7 +50,7 @@ class AnnouncementsController < ApplicationController
 
   private 
   def param_announcement
-    params.require(:announcement).permit(:title, :body, :user_id )
+    params.require(:announcement).permit(:title, :body, :user_id, :owners )
   end
 
   def set_announcement

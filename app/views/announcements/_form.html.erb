@@ -1,26 +1,32 @@
-<%= form_with(model: @announcement, local: true, url: choose_both) do |form| %>
-  
-
-    <% if @announcement.errors.any? %>
-        <div id="error_explanation">
-            <h2><%= @announcement.errors.count %>errors occurred.</h2>
-            <ul>
-                <% @announcement.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-            </ul>
+<div class="jumbotron">
+    <%= form_with(model: @announcement, local: true, url: choose_both) do |form| %>  
+        <div class="form-group">
+            <% if @announcement.errors.any? %>
+                <div id="error_explanation">
+                    <h2><%= @announcement.errors.count %>errors occurred.</h2>
+                    <ul>
+                        <% @announcement.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+        <div class="announcement_title">
+            <%= form.label :title %>
+            <%= form.text_field :title, class: "form-control mb-2 mr-sm-2" %>
+        </div>
+        <div class="announcement_body">
+            <%= form.label :body %>
+            <%= form.text_area :body, class: "form-control mb-2 mr-sm-2" %>
+        </div>
+        <div class="announcement_title">
+            <%= form.label :Bellongs_to %>
+            <%= form.select(:owners, options_for_select([["Software Engineer","Software Engineer"],["Network Engineer","Network Engineer"],["Maintenance Engineer","Maintenance Engineer"],["Education","Education"],["Accountant","Accountant"],["Pastor","Pastor"],["All","All"]], params[:owners] ), class:"select") %>
+        </div>
+        <div class="announcement_body">
+            <%= form.hidden_field :user_id, value: current_user.id %>
+        </div>
+            <%= form.submit class: "btn btn-primary" %>
         </div>
     <% end %>
-    <div class="announcement_title">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
-    </div>
-    <div class="announcement_body">
-        <%= form.label :body %>
-        <%= form.text_area :content %>
-    </div>
-    <div class="announcement_body">
-        <%= form.hidden_field :user_id, value: current_user.id %>
-    </div>
-    <%= form.submit %>
-<% end %>
+</div>

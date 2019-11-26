@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
-  
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'announcements#index'
-  resources :sessions
-  resources :users do
-    collection do
-      post :confirm
-    end
-  end
+  devise_for :users, controllers: {
+    registrations: "registrations"
+  }
   resources :announcements do
     resources :comments
     collection do

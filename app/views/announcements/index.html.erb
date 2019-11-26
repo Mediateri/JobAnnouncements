@@ -1,22 +1,30 @@
-<h1>Announcements#index</h1>
-<p class="message"><%= notice %></p>
-<p><%= current_user.profession %></p>
-    <% @announcements.each do |announcement| %>
-        <div class="card">
-            <div class="card-body">
-                <% if current_user.profession == announcement.owners || announcement.owners=='All' || current_user.admin? %>
-                    <p>Title : <%= announcement.title %></p>
-                    <p>Body : <%= announcement.body%></p>
-                    <p> <%= link_to 'details', announcement_path(announcement.id), class: "btn btn-info" %>
-                    <% if current_user.id == announcement.user_id || current_user.admin?%>
-                        <%= link_to link_to "edit", edit_announcement_path(announcement.id), class: "btn btn-warning" %>
-                        <%= link_to link_to 'Delete ' , announcement_path(announcement.id), method: :delete, class: "btn btn-danger" %></p>
-                    <% end %>
-                    <br/>
-                    <br/>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+  <p class="message"><%= notice %></p>
+  <% @announcements.each do |announcement| %>
+    <div class="card">
+        <div class="card-body">
+            <% if current_user.profession == announcement.owners || announcement.owners=='All' || current_user.admin? %>
+                <h5 class="card-title"><%= announcement.title %></h5>
+                <p class="card-text">Body : <%= announcement.body%></p>
+                <p> <%= link_to 'details', announcement_path(announcement.id), class: "btn btn-info" %>
+                 
+                <% if current_user.id == announcement.user_id || current_user.admin?%>
+                    <%= link_to link_to "edit", edit_announcement_path(announcement.id), class: "btn btn-warning" %>
+                    <%= link_to link_to 'Delete ' , announcement_path(announcement.id), method: :delete, class: "btn btn-danger" %>
                 <% end %>
-            </div>
+                omments: <%= announcement.comments.count%></p>
+                <br/>
+                <br/>
+            <% end %>
         </div>
-    <% end %>
+    </div>
+<% end %>
+<%= paginate @announcements %>
 <%= link_to 'Post a new announcement', new_announcement_path %>
+</div>
+<div class="col-sm-2"></div>
+</div>
 
+    

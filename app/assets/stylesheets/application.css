@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.colors {
+    background-color: #00838f;
+}
+
+.images {
+    background-image: url("photo19.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

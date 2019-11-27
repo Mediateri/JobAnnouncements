@@ -14,6 +14,17 @@
  *= require_self
  */
 
+.heigth {
+    height: 30rem;
+    text-align: center;
+    background-image: url("photo21.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
 .that {
     background-color: #042629 !important;
     color: bisque;

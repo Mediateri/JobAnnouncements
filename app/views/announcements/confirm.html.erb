@@ -1,4 +1,8 @@
 
+<div class='heigth'> 
+<div class='row'> 
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
   <%= form_with(model: @announcement, url: announcements_path, local: true) do |form| %>
     <%= form.hidden_field :title %>
     <%= form.hidden_field :body %>
@@ -15,3 +19,7 @@
     <%= form.hidden_field :body %>
     <%= form.submit "back", class: "btn btn-primary"  %>
   <% end %>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+</div>

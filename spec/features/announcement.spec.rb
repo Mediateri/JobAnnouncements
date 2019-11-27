@@ -10,18 +10,18 @@ RSpec.feature "Task management function", type: :feature do
     scenario "Test announcement list" do
         visit announcements_path
         click_link "Post a new announcement"
-        fill_in 'Title' , with: 'job1'
-        fill_in 'Body' , with: 'jobs'
-        click_on  'Create Announcement'
+        fill_in 'タイトル' , with: 'job1'
+        fill_in '体' , with: 'jobs'
+        click_on  '登録する'
         click_on  'submit'
         expect(page).to have_text 'job1'   
      end  
      scenario "Test announcement creation" do
         visit announcements_path
         click_link "Post a new announcement"
-        fill_in 'Title' , with: 'job1'
-        fill_in 'Body' , with: 'jobs'
-        click_on  'Create Announcement'
+        fill_in 'タイトル' , with: 'job1'
+        fill_in '体' , with: 'jobs'
+        click_on  '登録する'
         click_on  'submit'
         expect(page).to have_text 'You have created new announcement!' 
       end
@@ -37,9 +37,9 @@ RSpec.feature "Task management function", type: :feature do
       scenario "Test announcement deletion" do
         visit announcements_path
         click_link "Post a new announcement"
-        fill_in 'Title' , with: 'job1'
-        fill_in 'Body' , with: 'jobs'
-        click_on  'Create Announcement'
+        fill_in 'タイトル' , with: 'job1'
+        fill_in '体' , with: 'jobs'
+        click_on  '登録する'
         click_on  'submit'
         click_on 'Delete'
         expect(page).to have_text 'You have deleted the announcement!'

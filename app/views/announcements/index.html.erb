@@ -14,7 +14,7 @@
                     <%= link_to link_to "edit", edit_announcement_path(announcement.id), class: "btn btn-warning" %>
                     <%= link_to link_to 'Delete ' , announcement_path(announcement.id), method: :delete, class: "btn btn-danger" %>
                 <% end %>
-                omments: <%= announcement.comments.count%></p>
+                <i class="fas fa-comments"><%= announcement.comments.count%></i> </p>
                 <br/>
                 <br/>
             <% end %>

@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    models:
+      announcement: 発表
+      user: ユーザー
+      comment: コメント
+    attributes:
+      comment:
+        content: コンテンツ
+      announcement:
+        title: タイトル
+        body: 体
+      user:
+        name: 名前
+        email: メールアドレス
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
+        profession: プロフェ

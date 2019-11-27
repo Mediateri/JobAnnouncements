@@ -14,6 +14,11 @@
  *= require_self
  */
 
+.that {
+    background-color: #042629 !important;
+    color: bisque;
+}
+
 .colors {
     background-color: #00838f;
 }

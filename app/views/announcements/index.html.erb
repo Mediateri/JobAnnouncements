@@ -8,18 +8,35 @@
             <% if current_user.profession == announcement.owners || announcement.owners=='All' || current_user.admin? %>
                 <h5 class="card-title"><%= announcement.title %></h5>
                 <p class="card-text">Body : <%= announcement.body%></p>
-                <p> <%= link_to 'details', announcement_path(announcement.id), class: "btn btn-info" %>
+                <i class="fas fa-comments"><%= announcement.comments.count%></i> 
+                <div class ='d-inline p-2 text-white'> <%= link_to 'details', announcement_path(announcement.id), class: "btn btn-info" %>
                  
                 <% if current_user.id == announcement.user_id || current_user.admin?%>
                     <%= link_to link_to "edit", edit_announcement_path(announcement.id), class: "btn btn-warning" %>
                     <%= link_to link_to 'Delete ' , announcement_path(announcement.id), method: :delete, class: "btn btn-danger" %>
                 <% end %>
-                <i class="fas fa-comments"><%= announcement.comments.count%></i> </p>
-                <br/>
-                <br/>
+                <div class="floats">
+                <%= link_to likes_announcement_path(announcement), class:'likes', method: :put, remote: :true do %>
+                    <div>
+                        <span><p><i class="fa fa-thumbs-o-up fa-2x"  ></i> <span class='badge'><%=  announcement.get_upvotes.size  %></span> </p></span>
+                    </div>
+                <% end %>
+                </div>
+               
+                <div class="floats">
+                <%= link_to unlike_announcement_path(announcement), class:'unlike', method: :put, remote: :true do %>
+                    <div>
+                        <span><p><i class="fa fa-thumbs-down fa-2x"  ></i><span class='badge'><%=  announcement.get_downvotes.size  %></span></p></span>
+                    </div>
+                <% end %>
+                </div>
+                </div>
+                
             <% end %>
         </div>
     </div>
+    <br/>
+    <br/>
 <% end %>
 <%= paginate @announcements %>
 <%= link_to 'Post a new announcement', new_announcement_path %>

@@ -1,7 +1,7 @@
 class AnnouncementsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_announcement, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_announcement, only: [:show, :edit, :update, :destroy, :upvote, :downvote, :vote]
+  respond_to :js, :json, :html
   def index
     @announcements = Announcement.order('created_at DESC').page(params[:page])
   end
@@ -47,7 +47,21 @@ class AnnouncementsController < ApplicationController
       render :new
     end
   end
-
+  def vote
+    if !current_user.liked? @announcement
+      @announcement.liked_by current_user
+    elsif current_user.liked? @announcement
+      @announcement.unliked_by current_user
+    end
+  end
+  def upvote
+    @announcement.upvote_from current_user
+    redirect_to announcements_path
+  end
+  def downvote
+    @announcement.downvote_from current_user
+    redirect_to announcements_path
+  end
   private 
   def param_announcement
     params.require(:announcement).permit(:title, :body, :user_id, :owners )

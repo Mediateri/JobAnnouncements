@@ -12,5 +12,10 @@
         <p>List of Comments(Contents below are important)</p>
 
         <%= render 'comments/comment' %>
+
+          <%= link_to 'Edit', edit_announcement_path(@announcement) %> 
+          <%= link_to 'Return', announcements_path %>
+        </div>
+        </div>
       <div class="col-sm-2"></div> 
     </div> 

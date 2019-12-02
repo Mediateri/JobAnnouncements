@@ -1,8 +1,10 @@
-
+ 
 
 
 <%= form_for ([@announcement, @announcement.comments.build]) do |f| %>
-
-  <%= f.text_area :content, class:"single-input", placeholder:"enter comment"%>
-  <%= f.submit "announcement comment", class:"genric-btn info-border circle" %>
+  <div class="form-group">
+   
+  <%= f.text_area :content, class:"single-input", placeholder:"enter comment", class: "form-control"%>
+  <%= f.submit " comment", class:"genric-btn info-border circle", class: "btn btn-primary"  %>
+  </div>
 <%end%>

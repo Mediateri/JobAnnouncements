@@ -1,0 +1,6 @@
+<%= form_for ([@announcement, @comment]) do |f| %>
+
+    <%= f.text_area :content, class:"single-input"%>
+    <%= f.submit "announcement comment", class:"genric-btn info-border circle" %>
+
+<%end%>

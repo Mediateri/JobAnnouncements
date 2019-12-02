@@ -1,25 +1,3 @@
-  <div class='row'> 
-    <div class="col-sm-2"></div>  
-    <div class="col-sm-8">
-      <div class="container">
-        <p id="notice"><%= notice %></p>
+ 
 
-        <div class="announcement-text">
-          <p><strong>Title</strong>：<%= @announcement.title %></p>
-          <p><strong>Text</strong>：<%= @announcement.text %></p>
-        </div>
-
-        <p>List of Comments(Contents below are important)</p>
-
-        <div id="comments_area">
-          <%= render partial: 'comments/index', locals: { comments: @comments, announcement: @announcement } %>
-        </div>
-
-        <%= render partial: 'comments/form', locals: { comment: @comment, announcement: @announcement } %>
-
-          <%= link_to 'Edit', edit_announcement_path(@announcement) %> 
-          <%= link_to 'Return', announcements_path %>
-        </div>
-        </div>
-      <div class="col-sm-2"></div> 
-    </div> 
+  <%= render 'comments/comment' %>

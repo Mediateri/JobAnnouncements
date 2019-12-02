@@ -31,8 +31,7 @@ class AnnouncementsController < ApplicationController
   end
 
   def show
-      @comments = @announcement.comments
-      @comment = @announcement.comments.build
+    @comments = Comment.where(announcement_id: @announcement)
   end
   def confirm
     @announcement = Announcement.new(param_announcement)

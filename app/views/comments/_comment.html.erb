@@ -1,0 +1,14 @@
+<ul>
+  <% @comments.each do |comment| %>
+    <% if comment.id.present? %>
+      <li>
+        <p><br><%= comment.content %><br>
+        <% if user_signed_in? && current_user.id  %>
+        <%= link_to "delete", [comment.announcement, comment], method: :delete, class:"genric-btn danger-border circle" %>
+        <%= link_to "edit ", edit_announcement_comment_path(comment.announcement, comment), class:"genric-btn success-border circle" %></p>
+        </li>
+        <% end %>
+    <% end %>
+  <% end %>
+<%= render 'comments/form'%>
+</ul> 

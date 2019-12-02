@@ -1,18 +1,40 @@
 class CommentsController < ApplicationController
-  def create
-    @announcement = Announcement.find(params[:announcement_id])
-    @comment = @announcement.comments.build(comment_params)
-    respond_to do |format|
-      if @comment.save
-        format.js { render :index }
-      else
-        format.html { redirect_to announcement_path(@announcement), notice: 'Post failed please try again later...' }
-      end
+  before_action :find_announcement
+ before_action :find_comment, only: [:destroy, :edit , :update]
+def create
+@comment = @announcement.comments.create(params[:comment].permit(:content))
+@comment.save
+if @comment.save
+  redirect_to announcement_path(@announcement)
+else
+  render 'new'
+end
+end
+
+def destroy
+@comment.destroy
+redirect_to announcement_path(@announcement)
+end
+
+def edit
+
+end
+def update
+  if @comment.update(params[:comment].permit(:content))
+    redirect_to announcement_path(@announcement)
+    else
+      render 'edit'
     end
   end
-  
-    private
-    def comment_params
-      params.require(:comment).permit(:announcement_id, :content)
-    end
+  private
+def find_announcement
+  @announcement= Announcement.find(params[:announcement_id])
 end
+
+def find_comment
+  @comment = @announcement.comments.find(params[:id])
+end
+
+
+end
+

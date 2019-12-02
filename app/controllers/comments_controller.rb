@@ -7,7 +7,7 @@ def create
 if @comment.save
   redirect_to announcement_path(@announcement)
 else
-  render 'new'
+  redirect_to announcement_path(@announcement), notice: "failed to post..."
 end
 end
 

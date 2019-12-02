@@ -5,18 +5,18 @@
 <div class="col-sm-8">
   <%= form_with(model: @announcement, url: announcements_path, local: true) do |form| %>
     <%= form.hidden_field :title %>
-    <%= form.hidden_field :body %>
+    <%= form.hidden_field :text %>
     <%= form.hidden_field :user_id %>
     <%= form.hidden_field :owners %>
     <p>Title:<%= @announcement.title %></p> 
-    <p>Body:<%= @announcement.body %></p>
+    <p>text:<%= @announcement.text %></p>
     <p>Owner:<%= @announcement.owners %></p>
     <%= form.submit  "submit", class: "btn btn-primary" %>
   <% end %>
   
   <%= form_with(model: @announcement, url: new_announcement_path, local: true, method: 'get') do |form| %>
     <%= form.hidden_field :title %>
-    <%= form.hidden_field :body %>
+    <%= form.hidden_field :text %>
     <%= form.submit "back", class: "btn btn-primary"  %>
   <% end %>
   </div>

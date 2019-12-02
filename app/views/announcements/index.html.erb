@@ -7,7 +7,7 @@
         <div class="card-body">
             <% if current_user.profession == announcement.owners || announcement.owners=='All' || current_user.admin? %>
                 <h5 class="card-title"><%= announcement.title %></h5>
-                <p class="card-text">Body : <%= announcement.body%></p>
+                <p class="card-text">text : <%= announcement.text%></p>
                 <i class="fas fa-comments"><%= announcement.comments.count%></i> 
                 <div class ='d-inline p-2 text-white'> <%= link_to 'details', announcement_path(announcement.id), class: "btn btn-info" %>
                  

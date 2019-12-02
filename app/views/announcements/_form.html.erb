@@ -15,15 +15,15 @@
             <%= form.label :title %>
             <%= form.text_field :title, class: "form-control mb-2 mr-sm-2" %>
         </div>
-        <div class="announcement_body">
-            <%= form.label :body %>
-            <%= form.text_area :body, class: "form-control mb-2 mr-sm-2" %>
+        <div class="announcement_text">
+            <%= form.label :text %>
+            <%= form.text_area :text, class: "form-control mb-2 mr-sm-2" %>
         </div>
         <div class="announcement_title">
             <%= form.label :Bellongs_to %>
             <%= form.select(:owners, options_for_select([["Software Engineer","Software Engineer"],["Network Engineer","Network Engineer"],["Maintenance Engineer","Maintenance Engineer"],["Education","Education"],["Accountant","Accountant"],["Pastor","Pastor"],["All","All"]], params[:owners] ), class:"select") %>
         </div>
-        <div class="announcement_body">
+        <div class="announcement_text">
             <%= form.hidden_field :user_id, value: current_user.id %>
         </div>
             <%= form.submit class: "btn btn-primary" %>

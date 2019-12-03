@@ -11,8 +11,8 @@ RSpec.describe Announcement, type: :model do
       expect(announcement).not_to be_valid
     end
   
-    it "validation passes If text is described in title and text" do
-      announcement = Announcement.new(title: 'vv', text: 'Failure test')
+    it "validation fails If text is not described in title and text" do
+      announcement = Announcement.new(title: '', text: '')
       expect(announcement).not_to be_valid
     end
   end
